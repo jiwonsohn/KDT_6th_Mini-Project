@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>---SNS 대화 주제 예측---</title>
+		   
+    <!-- 외부 css 파일 적용 -->
+    <link type="text/css" rel="stylesheet" href="{{url_for('static', filename='css/main.css')}}">
+
+</head>
+<body>
+    <header>대화 주제 예측- 😺반려동물🐶</header>
+
+    <!-- <form action="{{ url_for('MAIN.Result', prediction=prediction) }}" method="POST"> -->
+    <form method="POST">
+        
+        <label>입력 예시</label><br/>
+        <pre>
+            난 이미 짐승인 거 자각 하고 있고 날 키워줄 동물이 필요해
+        </pre>
+        <textarea name="msg" placeholder="대화를 입력하세요" rows="15" cols="50"></textarea><br/>
+        <p><input type="submit" value="무슨 얘기중이야?">  {{prediction}}</p>
+    </form>
+
+
+</body>
+</html>
